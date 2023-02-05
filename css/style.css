@@ -42,38 +42,50 @@ header{
 
 /* ----- Main Styles ----- */
 /* Intro styles */
-
-#intro{
+section{
     width: 100%;
     padding: 50px 10px;
+}
+#intro{
     text-align: center;
     line-height: 200%;
     font-size: 200%;
 }
 /* About styles */
 #about{
-    width: 100%;
-    padding: 50px 10px;
     text-align: center;
     font-size: 150%;
     line-height: 200%;
 }
 .title{
+    width: 100%;
     text-align: center;
     font-size: 40px;
     padding-bottom: 20px;
 }
 /* Skills styles */
-#skills{
-    padding: 50px 10px;
-}
+
 .skills{
     width: 100%;
+    display: flex;
+    height: auto;
+    padding: 0 20%;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .skills img{
-    width: 90px;
+    width: 220px;
+    padding: 7% 5%;
 }
+/* Projects styles */
+.description{
+    width: 20%;
+}
+.p-img img{
+    width: 100px;
+}
+
 
 @media screen and (max-width:1023px){
     header{
