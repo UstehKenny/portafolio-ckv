@@ -15,11 +15,13 @@ body{
 header{
     width: 100%;
     display: flex;
+    justify-content: space-between;
     padding: 2% 2%; 
 }
 /* Header styles */
 .info{
     width: 50%;
+    text-align: center;
 }
 .links{
     text-align: center;
@@ -29,7 +31,7 @@ header{
     padding-left: 10px;
 }
 .social{
-    width: 29%;
+    width: 30%;
     display: flex;
 }
 .links-ico{
