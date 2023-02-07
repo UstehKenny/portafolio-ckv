@@ -1,24 +1,29 @@
 /* ----- General configuration ----- */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
 }
 html{
     width: 100%;
+    background-color: #18134c;
+    color: #F1F6F5;
     overflow-x: hidden;
 }
 body{
     width: 100vw;
     overflow-y: auto;
 }
+
+/* Header styles */
 header{
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 2% 2%; 
 }
-/* Header styles */
 .info{
     width: 50%;
     text-align: center;
@@ -27,9 +32,67 @@ header{
     text-align: center;
     font-size: 140%;
     text-decoration: none;
+    color: #F1F6F5;
     padding-right: 10px;
     padding-left: 10px;
+    font-family: 'Oxanium', cursive;
 }
+@keyframes pulsate {
+100% {
+        text-shadow:
+        0 0 4px #F1F6F5,
+        0 0 11px #F1F6F5,
+        0 0 19px #F1F6F5,
+        0 0 40px #8200FF,
+        0 0 80px #8200FF,
+        0 0 90px #8200FF,
+        0 0 100px #8200FF,
+        0 0 150px #8200FF;
+}
+0% {
+    text-shadow:
+        0 0 2px #F1F6F5,
+        0 0 4px #F1F6F5,
+        0 0 6px #F1F6F5,
+        0 0 10px #06CDFF,
+        0 0 45px #06CDFF,
+        0 0 55px #06CDFF,
+        0 0 70px #06CDFF,
+        0 0 80px #06CDFF;
+}
+}
+
+@keyframes pulsate2 {
+100% {
+
+    filter: drop-shadow(0 0 2px #470C85)
+            drop-shadow(0 0 4px #470C85)
+            drop-shadow(0 0 6px #470C85)
+            drop-shadow(0 0 10px #06CDFF)
+            drop-shadow(0 0 45px #06CDFF)
+            drop-shadow(0 0 55px #06CDFF)
+            drop-shadow(0 0 70px #06CDFF)
+            drop-shadow(0 0 80px #06CDFF);
+}
+0% {
+
+    filter: drop-shadow(0 0 1px #470C85)
+            drop-shadow(0 0 2px #470C85)
+            drop-shadow(0 0 3px #470C85)
+            drop-shadow(0 0 5px #8200FF)
+            drop-shadow(0 0 22px #8200FF)
+            drop-shadow(0 0 27px #8200FF)
+            drop-shadow(0 0 35px #8200FF)
+            drop-shadow(0 0 40px #8200FF);
+}
+}
+.links:hover{
+    cursor:help;
+    animation: pulsate 1.5s infinite alternate;
+}
+
+
+
 .social{
     width: 30%;
     display: flex;
@@ -39,15 +102,26 @@ header{
     padding-right: 4%;
 }
 .links-ico img{
-    width:180%;
+    width:33px;
+}
+.links-ico:hover{
+    cursor: wait;
+    animation: pulsate2 1.5s infinite alternate;
 }
 
 /* ----- Main Styles ----- */
-/* Intro styles */
 section{
     width: 100%;
-    padding: 50px 60px;
+    padding: 100px 60px;
 }
+.title{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+/* Intro styles */
 #intro{
     text-align: center;
     line-height: 200%;
@@ -59,14 +133,27 @@ section{
     font-size: 150%;
     line-height: 200%;
 }
-.title{
-    width: 100%;
-    text-align: center;
-    font-size: 40px;
-    padding-bottom: 20px;
-}
+
 /* Skills styles */
 
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        filter: drop-shadow(0 0 1px #472183)
+            drop-shadow(0 0 2px #470C85)
+            drop-shadow(0 0 3px #470C85)
+            drop-shadow(0 0 5px #06CDFF)
+            drop-shadow(0 0 22px #06CDFF)
+            drop-shadow(0 0 27px #06CDFF)
+            drop-shadow(0 0 35px #06CDFF)
+            drop-shadow(0 0 40px #06CDFF);
+    
+    }
+    
+    20%, 24%, 55% {        
+        filter: drop-shadow(0 0 0 transparent);
+    }    
+}
 .skills{
     width: 100%;
     display: flex;
@@ -80,26 +167,30 @@ section{
     width: 220px;
     padding: 7% 5%;
 }
+
+.skills img:hover{
+    animation: flicker 1.5s infinite alternate;
+}
 /* Projects styles */
 .projects{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .card{
-    width: 33%;
+    width: 25%;
     height: 250px;
 }
 .alura{
     background: url(/img/projects/alura01.png);
-    background-size: 100% 100%;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .estafam{
     background: url(/img/projects/estafam.png);
-    background-size: 100% 100%;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -111,11 +202,20 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* display: none; */
+    opacity: 0;
+    transition: .5s ease;
 }
+.card:hover .description{
+    opacity: 1;
+}
+
 .text-desc, .p-img{
     width: 100%;
     padding: 5% 10%;
+}
+.text-desc{
+    font-size: 25px;
+    line-height: 30px;
 }
 .p-img{
     width: 100%;
@@ -123,9 +223,17 @@ section{
     justify-content: space-evenly;
 }
 
+.g-img{
+    width: 40px;
+}
+.l-img{
+    width:53px;
+}
 
 
 @media screen and (max-width:1023px){
+    /* Header styles */
+
     header{
         flex-direction: column;
         padding-top: 2%;
@@ -149,10 +257,37 @@ section{
         padding-left: 6%;
         padding-right: 6%;
     }
+
+    /* Intro styles */
+
+    /* Skills styles */
+    .skills{
+        padding: 0 5%;
+    }
+
+    /* Projects styles */
+    .projects{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+        height: 500px;
+        margin: 2% 0%;
+    }
+    .text-desc{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .g-img{
+        width: 70px;
+    }
+    .l-img{
+        width:85px;
+    }
 }
 
 @media screen and (max-width:540px){
-    
+    /* Header styles */
     .social{
         width: 100%;
     }
@@ -160,8 +295,55 @@ section{
         line-height: 30px;
         font-size: 110%;
     }
+    /* ----- Main Styles ----- */
+    section{
+        width: 100%;
+        padding: 50px 20px;
+    }
+    /* Intro styles */
+
+    /* About styles */
+    #about{
+        font-size: 20px;
+    }
+
+    /* Skills styles */
+    .skills img{
+        width: 90px;
+        padding: 0%;
+        margin: 5% 3%;
+    }
+
+    /* Projects styles */
+    .projects{
+        flex-direction: column;
+        padding: 0 8%;
+    }
+    .card{
+        width: 100%;
+        height: 180px;
+        margin: 2% 0%;
+    }
+
+    .text-desc{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .g-img{
+        width: 40px;
+    }
+    .l-img{
+        width:50px;
+    }
 }
 
 @media screen and (max-height:480px){
+    /* Header styles */
+
+    /* ----- Main Styles ----- */
+    /* Intro styles */
+
+    /* Skills styles */
     
+    /* Projects styles */
 }
