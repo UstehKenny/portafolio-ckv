@@ -182,14 +182,14 @@ section{
     height: 250px;
 }
 .alura{
-    background: url(/img/projects/alura01.png);
+    background-image: url("/img/projects/alura01.png");
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .estafam{
-    background: url(/img/projects/estafam.png);
+    background-image: url("/img/projects/estafam.png");
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
