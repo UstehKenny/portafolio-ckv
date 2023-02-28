@@ -18,4 +18,8 @@ function typeWriter() {
     timer = setTimeout ('typeWriter()', 80) ;
 }
 
+// function displayGallery(){
+
+// }
+
 window.addEventListener('load',typeWriter);

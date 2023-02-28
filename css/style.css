@@ -176,6 +176,7 @@ section{
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin-top: 35px;
 }
 .card{
     width: 25%;
@@ -235,6 +236,42 @@ section{
     cursor: pointer;
 }
 
+.tooltip {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 170px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 40%;
+    margin-left: -60px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
 @media screen and (max-width:1023px){
     /* Header styles */
 
@@ -272,6 +309,7 @@ section{
     /* Projects styles */
     .projects{
         flex-direction: column;
+        
     }
     .card{
         width: 100%;
