@@ -230,6 +230,10 @@ section{
     width:53px;
 }
 
+.g-img:hover, .l-img:hover{
+    filter: drop-shadow(0 0 0.9rem #06CDFF);
+    cursor: pointer;
+}
 
 @media screen and (max-width:1023px){
     /* Header styles */
