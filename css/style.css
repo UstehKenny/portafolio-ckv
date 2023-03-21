@@ -188,9 +188,26 @@ section{
     background-repeat: no-repeat;
     background-position: center;
 }
-
+.alura2{
+    background-image: url('../img/projects/alura02.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .estafam{
     background-image: url('../img/projects/estafam.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.estabday{
+    background-image: url('../img/projects/estafam.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.mokepon{
+    background-image: url('../img/projects/mokepon.png');
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
