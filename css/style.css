@@ -11,6 +11,7 @@ html{
     background-color: #18134c;
     color: #F1F6F5;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body{
     width: 100vw;
@@ -37,6 +38,38 @@ header{
     padding-left: 10px;
     font-family: 'Oxanium', cursive;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #F1F6F5;
+    min-width: 160px;
+    box-shadow: 0px 4px 12px 0px #06CDFF;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #e8e8e8;}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown {
+    font-family: 'Oxanium', cursive;
+}
+
+
 @keyframes pulsate {
 100% {
         text-shadow:
@@ -201,13 +234,19 @@ section{
     background-position: center;
 }
 .estabday{
-    background-image: url('../img/projects/estafam.png');
+    background-image: url('../img/projects/esta-bday.png');
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
 .mokepon{
     background-image: url('../img/projects/mokepon.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.magestic{
+    background-image: url('../img/projects/magestic.png');
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -259,7 +298,7 @@ section{
     display: inline-block;
   }
   
-  .tooltip .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 170px;
     background-color: black;
@@ -272,9 +311,9 @@ section{
     bottom: 150%;
     left: 40%;
     margin-left: -60px;
-  }
-  
-  .tooltip .tooltiptext::after {
+}
+
+.tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -283,11 +322,11 @@ section{
     border-width: 5px;
     border-style: solid;
     border-color: black transparent transparent transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
+}
+
+.tooltip:hover .tooltiptext {
     visibility: visible;
-  }
+}
 
 @media screen and (max-width:1023px){
     /* Header styles */
