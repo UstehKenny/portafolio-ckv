@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="img/icons/kenny.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <title>C K V</title>
 </head>
 <body>
@@ -26,7 +26,6 @@
                     <a href="/doc/CV-S-CKV.pdf" download>🇲🇽 Spanish</a>
                     <a href="/doc/CV-E-CKV.pdf" download>🇺🇸 English</a>
                 </div>
-
             </div>
         </div>
         
@@ -58,7 +57,9 @@
                 <img src="img/icons/laravel.svg" alt="Laravel Logo" class="skill-icon"> 
             </div>
         </section>
+        
         <section id="projects">
+            
             <p class="title">Projects<br></p>
             <div class="projects">
                 <div class="card alura">    
@@ -94,7 +95,7 @@
             </div> <!--Close projects div-->
 
             <div class="projects">
-
+                
                 <div class="card estabday">
                     <div class="description">
                         <p class="text-desc">Streamer's Birthday present 🎁 Project just for fun! 👾</p>
@@ -119,21 +120,61 @@
                     <div class="description">
                         <p class="text-desc">MAGESTIC system</p>
                         <div class="p-img">
-                                <div class="tooltip">
-                                    <a href=""><img class="l-img" src="img/icons/live.svg" alt="Live Icon"></a>
-                                    <span class="tooltiptext">Just images gallery available</span>
-                                </div>
+                            <div class="tooltip">
+                                <a href="#carousel" onclick="return displayGallery();"><img class="l-img" src="img/icons/live.svg" alt="Live Icon"></a>
+                                <span class="tooltiptext">Just images gallery available</span>
                             </div>
+                        </div>
                         
                     </div>
                 </div>
             </div>
-
+             
         </section>
+        <div class="gallery-container" id="carousel">
+            <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev">&#8249;</button>
+                <button class="carousel-button next" data-carousel-button="next">&#8250;</button>
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <img src="img/gallery/01.png" alt=""> <!--1508x830-->
+                    </li> 
+                    <li class="slide">
+                        <img src="img/gallery/02.png" alt=""> 
+                    </li> 
+                    <li class="slide">
+                        <img src="img/gallery/03.png" alt=""> 
+                    </li>
+                    <li class="slide">
+                        <img src="img/gallery/04.png" alt=""> 
+                    </li> 
+                    <li class="slide">
+                        <img src="img/gallery/05.png" alt=""> 
+                    </li> 
+                    <li class="slide">
+                        <img src="img/gallery/06.png" alt=""> 
+                    </li> 
+                    <li class="slide">
+                        <img src="img/gallery/07.png" alt=""> 
+                    </li> 
+                    <li class="slide">
+                        <img src="img/gallery/08.png" alt=""> 
+                    </li> 
+                    <li class="slide">
+                        <img src="img/gallery/09.png" alt=""> 
+                    </li> 
+                    <li class="slide">
+                        <img src="img/gallery/10.png" alt=""> 
+                    </li> 
+                </ul>
+            </div>
+        </div>
+        
     </main>
-
+     
     <footer>
         
     </footer>
+    
 </body>
 </html>
